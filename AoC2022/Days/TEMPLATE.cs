@@ -10,17 +10,17 @@ namespace AoC2022.Days
     {
         public void Solve(string puzzleInput)
         {
-            SolvePartOne();
-            SolvePartTwo();
+            SolvePartOne(puzzleInput);
+            SolvePartTwo(puzzleInput);
         }
 
-        private void SolvePartOne()
+        private void SolvePartOne(string puzzleInput)
         {
             string answer = "";
             Console.WriteLine($"\tAnswer day {this.GetType().Name[3..]} part 1: {answer}");
         }
 
-        private void SolvePartTwo()
+        private void SolvePartTwo(string puzzleInput)
         {
             string answer = "";
             Console.WriteLine($"\tAnswer day {this.GetType().Name[3..]} part 2: {answer}");
