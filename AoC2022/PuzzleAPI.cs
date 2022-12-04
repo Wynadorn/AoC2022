@@ -26,10 +26,7 @@ namespace AoC2022
                 using HttpClient client = new HttpClient(handler);
                 
                 var message = new HttpRequestMessage(HttpMethod.Get, url);
-                message.Headers.Add("Cookie",
-                                    "_ga=GA1.2.472988738.1670093144; " +
-                                    "_gid=GA1.2.965468856.1670093144; " +
-                                    "session=53616c7465645f5f82e9dfbbd6faa245fe4897439aea6810e2e3aa9f0f76e517d0a207890724b087f2305f7aaa91e7158cf6e5996f6eef77ef5c983f4eba75b6;");
+                message.Headers.Add("Cookie", File.ReadAllText($"./cache/cookie.txt"));
                 HttpResponseMessage result = client.Send(message);
                 result.EnsureSuccessStatusCode();
 
